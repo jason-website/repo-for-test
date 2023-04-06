@@ -10,8 +10,7 @@ agent any
             token: 'test',
             causeString: 'Triggered by github webhook on commit $commit to $ref by $committer',
             printContributedVariables: true,
-            printPostContent: true,
-            silentResponse: true
+            printPostContent: true
     )
   }
 stages{
