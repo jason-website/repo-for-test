@@ -16,7 +16,7 @@ pipeline {
         echo "parameter test ${params.BOOLEAN}"
       }
     }
-    stage('show environment variables) {
+    stage('show environment variables') {
       steps {
         echo "$NEW_VERSION"
       }
