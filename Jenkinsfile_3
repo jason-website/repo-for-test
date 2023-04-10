@@ -1,13 +1,13 @@
 pipeline{
 agent any
 tools {
-  gradle 'Gradle-6.2'
+  gradle 'Gradle'
 }
 stages{
 stage("run frontend"){
 steps{
      echo 'executing yarn'
-     nodejs('Node-10.17'){
+     nodejs('NodeJs'){
      sh 'yarn install'
                          }
      }
