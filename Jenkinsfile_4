@@ -1,0 +1,25 @@
+pipeline {
+  agent any
+  parameters{
+     string(name:'VERSION',defaultValue:'',description:'fill out a version')
+     choice(name:'CHOICE',choices:['1.0','1.1'],description:'choices for version')
+     booleanParam(name:'BOOLEAN',defaultValue:true,description:'This is a booleanParam')
+  }
+  environment{
+  NEW_VERSION=1.2
+  }
+  stages {
+    stage('show all parameters') {
+      steps {
+        echo "parameter test ${params.VERSION}"
+        echo "parameter test ${params.CHOICE}"
+        echo "parameter test ${params.BOOLEAN}"
+      }
+    }
+    stage('show environment variables) {
+      steps {
+        echo "$NEW_VERSION"
+      }
+    }
+  }
+}
